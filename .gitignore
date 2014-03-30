@@ -1,5 +1,4 @@
-/pace-league-2014/bower_components/**/*
-/pace-league-2014/node_modules/**/* 
+pace-league-2014/bower_components/*
+pace-league-2014/node_modules/*
 
-+pace-league-2014/node_modules/**
-+pace-league-2014/bower_components/**
+
