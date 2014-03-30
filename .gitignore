@@ -1,2 +1,5 @@
 /pace-league-2014/bower_components/**/*
 /pace-league-2014/node_modules/**/* 
+
++node_modules/**
++bower_components/**
