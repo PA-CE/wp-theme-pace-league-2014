@@ -1,0 +1,281 @@
+@import "../less_vars/variables.less";
+@import "../../bower_components/bootstrap/less/mixins.less";
+
+// Reset
+@import "../../bower_components/bootstrap/less/normalize.less";
+@import "../../bower_components/bootstrap/less/print.less";
+
+// Core CSS
+@import "../../bower_components/bootstrap/less/tables.less";
+
+@import "../../bower_components/bootstrap/less/grid.less";
+@import "../../bower_components/bootstrap/less/scaffolding.less";
+@import "../../bower_components/bootstrap/less/responsive-utilities.less";
+@import "../../bower_components/bootstrap/less/type.less";
+@import "../../bower_components/bootstrap/less/code.less";
+
+//less hat mixin library
+@import "../../bower_components/lesshat/build/lesshat-prefixed.less";
+
+
+/* ==========================================================================
+   Global vars
+   ========================================================================== */
+
+/* Global paths
+   ========================================================================== */
+
+/* Global Colours
+   ========================================================================== */
+
+@light-orange: #FD9900;
+@dark-orange: #CC6600;
+
+body {
+    background-image: url(../img/moon_4.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    padding: 30px 50px;
+
+}
+
+a {
+    color: #fff;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+}
+
+.row {
+    .clearfix;
+}
+
+.site-title-container {
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+}
+
+.small-border-img {
+    .lh-border-image(url(../img/input_border_image_v2.png) 10 fill repeat);
+    border-width: 10px;
+
+}
+
+.container-box {
+
+    .lh-border-image(url(../img/image_border_v4.png) 37 repeat);
+
+    position: relative;
+    border-width: 37px;
+
+    &:before {
+        position: absolute;
+        content: ' ';
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: -1;
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    margin-bottom: 20px;
+}
+
+.content-container {
+
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+
+}
+
+.custom-button {
+
+    .lh-border-image(url(../img/image_border_very_small_green.png) 12 repeat);
+
+    display: inline-block;
+
+    position: relative;
+    border-width: 12px;
+
+    span {
+        .lh-transition(0.5s);
+        background-color: #006600;
+        border-color: #006600;
+        border-width: 0px 5px 0px 5px;
+        border-style: solid;
+        display: inline-block;
+        padding: 0px 30px;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+
+        .lh-border-image(url(../img/image_border_very_small_green.png) 12 repeat);
+
+        span {
+            border-color: #00FE00;
+            border-width: 0px 5px 0px 5px;
+            border-style: solid;
+            color: #00FE00;
+        }
+    }
+
+}
+
+
+.home {
+    .post-header {
+        display: none;
+    }
+}
+
+.basic-input {
+
+    .small-border-img;
+
+    background: transparent;
+    font-size: 14px;
+    line-height: 14px;
+    outline: none;
+    min-width: 50%;
+
+}
+
+.gform_wrapper {
+
+    .gform_fields {
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    .gfield {
+
+        list-style: none;
+
+        input[type="text"] {
+            .basic-input;
+
+        }
+
+        input[type="email"] {
+            .basic-input;
+
+        }
+
+        textarea {
+            .basic-input;
+        }
+
+        &.gfield_error {
+            input[type="text"], input[type="email"], textarea {
+                .lh-border-image(url(../img/input_border_image_red_v2.png) 10 fill repeat);
+            }
+        }
+
+        margin-bottom: 10px;
+
+        .gfield_label {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+        .gfield_description {
+            padding: 8px 0px 0px 0px;
+        }
+    }
+
+    .gform_footer {
+
+        .custom-button {
+            color: #fff;
+        }
+
+    }
+
+}
+
+header {
+
+    margin-bottom: 20px;
+
+    h1 {
+        margin: 0px;
+    }
+}
+
+.menu {
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        list-style: none;
+        display: inline-block;
+        line-height: 40px;
+    }
+
+    a {
+        display: block;
+        padding: 0px 20px;
+        line-height: 40px;
+    }
+
+    span {
+        text-transform: uppercase;
+        display: block;
+        line-height: 40px;
+    }
+}
+
+.content-sub-menu {
+    padding: 0px;
+    margin: 0px;
+    li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    a {
+        .lh-transition(0.5s);
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover {
+            color: @dark-orange;
+            text-decoration: none;
+        }
+    }
+}
+
+.text {
+    a {
+        .lh-transition(0.5s);
+
+        color: @light-orange;
+
+        &:hover {
+            color: @dark-orange;
+            text-decoration: none;
+        }
+    }
+}
+
+.widget_tournament_signup {
+
+    .custom-button, span {
+        width: 100%;
+        text-align: center;
+    }
+
+}
